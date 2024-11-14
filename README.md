@@ -26,9 +26,9 @@ This project leverages deep learning to recognize seven different emotions from 
 
 ## 📁 Folder Structure
 
-- `dataset/` - FER-2013 dataset (Download instructions are below).
+- `FER_2013/` - FER-2013 dataset (can be seen in kaggle also).
 - `model/` - Contains the trained model file (`model.h5`).
-- `notebooks/` - Jupyter notebook file with model architecture, training, and evaluation.
+- `notebooks/` - colab notebook file with model architecture, training, and evaluation.
 - `flask_app/` - Flask application with a minimalistic web interface.
     - `app.py` - The main Flask application script.
     - `templates/` - HTML template files.
