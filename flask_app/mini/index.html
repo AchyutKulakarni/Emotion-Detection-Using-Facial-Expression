@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            
+
+        }
+
+        header {
+            background-image: url('https://drive.google.com/file/d/15pO6Tc7vCZyd3o_1BAPgmCBdLP48ony1/view?usp=sharing');
+            background-size: cover;
+            backdrop-filter: blur(10px);
+            /* filter: blur(3px); */
+            color: #ecf0f1;
+            text-align: center;
+            height: 750px;
+            padding: 2em 0;
+
+            
+        }
+        
+        .head{
+            margin-top:200px;
+            margin-bottom: 370px;
+            color: black;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 70px;
+        }
+
+        nav {
+            /* background-color: #999e2e; */
+            padding: 1em 0;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 1em;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+        .nav-bar{
+            display: flex;
+            flex-direction:row-reverse;
+            justify-content: end;
+            align-items: center;
+            align-content: center ;
+            /* background-color: #ff748c; */
+            height: 70px;
+
+            /* margin-top:50px;  */
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        #register{
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 500px;
+            border: #f2c09c 2px solid;
+            background-color: #e6bba1;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        #section{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            border: black 1px solid;
+            box-sizing: fixed;
+
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0 20px rgba(9, 31, 54, 0.5);
+            border-radius: 12px;
+            z-index: -1;
+        }
+
+        .wrapper {
+            width: 420px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(9px);
+            color: rgb(59, 59, 59);
+            border-radius: 12px;
+            padding: 30px 40px;
+        }
+
+        .wrapper h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .wrapper .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgb(59, 59, 59);
+            border-radius: 40px;
+            font-size: 16px;
+            color: rgb(59, 59, 59);
+            padding: 20px 45px 20px 20px;
+        }
+
+        .input-box input::placeholder {
+            color: rgb(59, 59, 59);
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 30%;
+            transform: translate(-50%);
+            font-size: 20px;
+        }
+
+        .wrapper .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14.5px;
+            margin: -15px 0 15px;
+        }
+
+        .remember-forgot label input {
+            accent-color: rgb(59, 59, 59);
+            margin-right: 3px;
+        }
+
+        .remember-forgot a {
+            color: rgb(59, 59, 59);
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .wrapper .sbtn {
+            width: 100%;
+            height: 30px;
+            background-color: #4CAF50;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            box-sizing: border-box;
+        }
+
+        .wrapper .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+
+        .register-link p a {
+            color: rgb(59, 59, 59);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the button element
+            var scrollToFooterButton = document.getElementById('scrollToFooterButton');
+
+            // Add a click event listener to the button
+            scrollToFooterButton.addEventListener('click', function() {
+                // Get the position of the footer element
+                var footerPosition = document.getElementById('footer').getBoundingClientRect().top;
+
+                // Scroll the page to the footer position
+                window.scrollTo({
+                    top: footerPosition,
+                    behavior: 'smooth' // Use smooth scrolling for a better user experience
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded',function(){
+            var scrollregister=document.getElementById('scrollregister');
+
+            scrollregister.addEventListener('click',function(){
+                var regposition=document.getElementById('register').getBoundingClientRect().top;
+
+                window.scrollTo({
+                    top:regposition,
+                    behavior:'smooth'
+                })
+            })
+        });
+
+        function showregister(){
+            document.getElementById('showRegisterForm').addEventListener('click', function() {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('registerForm').style.display = 'block';
+            });
+        }
+  
+        function showlogin(){
+            document.getElementById('showLoginForm').addEventListener('click', function() {
+                document.getElementById('loginForm').style.display = 'block';
+                document.getElementById('registerForm').style.display = 'none';
+            });
+        }
+
+        function validater(){
+            var reguser=document.getElementById("registerUsername").value.trim();
+            var regpass=document.getElementById("registerPassword").value.trim();
+            var regcon=document.getElementById("confirmPassword").value.trim();
+            if (reguser === '' || regpass === '' || regcon=== '') {
+                alert('Please fill in all fields');
+                return false;
+            }
+
+            if(regpass !== regcon){
+                alert("Your passwords did not match");
+                return false;
+            }
+
+            showlogin();
+        }
+
+        function validate(){
+            var loguser=document.getElementById("loginUsername").value.trim();
+            var logpass=document.getElementById("loginPassword").value.trim();
+            if (loguser === '' || logpass === '' ) {
+                alert('Please fill in all fields');
+                return false;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        
+        <div class="nav-bar">
+            <!-- <a href="#"><button type="button" class="btn" style="font-size: x-large; color:black;"><b>Login</b></button></a> -->
+            <a href="#"><button type="button" class="btn" id="scrollToFooterButton" style="font-size: x-large; color:black;" ><b>About us</b></button></a>
+            <a href="#"><button type="button" class="btn" id="scrollregister" style="font-size: x-large; color:black"><b>Register/Login</b></button></a>
+            <a href="#"><button type="button" class="btn" style="font-size: x-large; color:black"><b>Home</b></button></a>
+ 
+
+        </div>
+    
+        <h1 class="head"><b>Emotion Detection System</b></h1>
+    
+    </header>
+
+
+    <section id="section">
+        <div id="register">
+            <form action="/registerbtn" method="post"  id="registerForm" style="display: none;">
+                <h1><b>Register</b></h1>
+                <div class="input-box">
+                  <input type="text" placeholder="Username" name="registerUsername" id="registerUsername">
+                  <!-- <i class='bx bxs-user'></i> -->
+                </div>
+                <div class="input-box">
+                  <input type="password" placeholder="Password" name="registerPassword" id="registerPassword">
+                  <!-- <i class='bx bxs-lock-alt' ></i> -->
+                </div>
+                <div class="input-box">
+                  <input type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword">
+                  <!-- <i class='bx bxs-lock-alt' ></i> -->
+                </div>
+                <!-- <button type="submit" class="sbtn">Register</button> -->
+                <button  class="sbtn" name="registerbtn" id="registerbtn" onclick="validater()"><b>Register</b></button>
+                <div class="register-link">
+                  <p>Already have an account? <span id="showLoginForm"><a href="#" onclick="showlogin()">Login</a></span></p>
+                </div>
+            </form>
+
+            <form  id="loginForm" action="/loginbtn" method="post">
+              <h1><b>Login</b></h1>
+              <div class="input-box">
+                <input type="text" placeholder="Username" name="loginUsername" id="loginUsername">
+                <!-- <i class='bx bxs-user'></i> -->
+              </div>
+              <div class="input-box">
+                <input type="password" placeholder="Password" name="loginPassword" id="loginPassword">
+                <!-- <i class='bx bxs-lock-alt' ></i> -->
+              </div>
+              <button class="sbtn" id="loginbtn" name="loginbtn" onclick="validate()"><b>Login</b></button>
+              <br>
+              <div class="remember-forgot">
+                <!-- <label><input type="checkbox">Remember Me</label> -->
+                <a href="#">Forgot Password</a>
+              </div>
+              
+              <div class="register-link">
+                <p>New user? <span id="showRegisterForm"><a href="#"  onclick="showregister()">Register</a></span></p>
+              </div>
+            </form>
+        
+            
+        </div>
+
+    </section>
+
+    <footer id="footer">
+        &copy; KLE tech
+
+    </footer>
+
+</body>
+
+</html>
+
+
